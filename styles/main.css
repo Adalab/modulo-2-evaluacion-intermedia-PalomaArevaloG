@@ -1,0 +1,37 @@
+.main {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+}
+
+.button {
+    background-color: cyan;
+    color: white;
+    width: 10em;
+    border-radius: 10px;
+    border: none;
+    margin-top: 10px;
+    padding: 10px;
+    font-size: 20px;
+}
+
+.title {
+    font-size: 40px;
+}
+
+.clue {
+    border: solid 3px grey;
+    margin-top: 10px;
+}
+
+.count {
+    border: solid 3px grey;
+    margin-top: 10px;
+}
