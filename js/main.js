@@ -30,6 +30,8 @@ function guessNumber() {
         clue.innerHTML = "Demasiado bajo";
     } else if (number === randomNumber) {
         clue.innerHTML = "Has ganado campeona!!!";
+    } else {
+        clue.innerHTML = "El número debe estar entre 1 y 100";
     }
 }
 
