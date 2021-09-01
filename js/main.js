@@ -10,3 +10,11 @@ let acc = 0;
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
+
+function handleClickButton(event) {
+    event.preventDefault();
+    const number = input.value;
+    console.log(number);
+}
+console.log(randomNumber);
+button.addEventListener("click", handleClickButton);
