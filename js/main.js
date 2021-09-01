@@ -11,14 +11,15 @@ let acc = 0;
 function getRandomNumber(max) {
     return Math.ceil(Math.random() * max);
 }
-
-function countClick() {
-    acc += 1;
-    count.value = `Número de intentos:${acc}`;
-}
+console.log(`El número a adivinar es ${randomNumber}`);
 
 function handleClickButton(event) {
     event.preventDefault();
+    countClick();
+    guessNumber();
+}
+
+function guessNumber() {
     let number = parseInt(input.value);
     console.log(`Has introducido el número ${number}`);
     if (number < 1 || number > 100) {
@@ -30,8 +31,10 @@ function handleClickButton(event) {
     } else if (number === randomNumber) {
         clue.innerHTML = "Has ganado campeona!!!";
     }
-    countClick();
 }
 
-console.log(`El número a adivinar es ${randomNumber}`);
+function countClick() {
+    acc += 1;
+    count.value = `Número de intentos:${acc}`;
+}
 button.addEventListener("click", handleClickButton);
