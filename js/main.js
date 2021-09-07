@@ -19,19 +19,23 @@ function handleClickButton(event) {
     guessNumber();
 }
 
+function writeTip(message) {
+    clue.innerHTML = message;
+}
+
 function guessNumber() {
     let number = parseInt(input.value);
     console.log(`Has introducido el número ${number}`);
     if (number < 1 || number > 100) {
-        clue.innerHTML = "El número debe estar entre 1 y 100";
+        writeTip("El número debe estar entre 1 y 100");
     } else if (number > randomNumber) {
-        clue.innerHTML = "Demasiado alto";
+        writeTip("Demasiado alto");
     } else if (number < randomNumber) {
-        clue.innerHTML = "Demasiado bajo";
+        writeTip("Demasiado bajo");
     } else if (number === randomNumber) {
-        clue.innerHTML = "Has ganado campeona!!!";
+        writeTip("Has ganado campeona!!!");
     } else {
-        clue.innerHTML = "El número debe estar entre 1 y 100";
+        writeTip("Debes escribir un número");
     }
 }
 
